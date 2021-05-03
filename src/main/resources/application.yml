@@ -1,0 +1,14 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: ${GITHUB_CLIENT_ID}
+            clientSecret: ${GITHUB_CLIENT_SECRET}
+  liquibase:
+    change-log: classpath:/db/changelog/master.xml
+
+server:
+  servlet:
+    context-path: /api
